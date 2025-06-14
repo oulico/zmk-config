@@ -3,6 +3,7 @@
 / {
     key_physical_attrs: key_physical_attrs {
         compatible = "zmk,physical-layout-position";
+        #key-cells = <7>;
     };
 
     kscan0: kscan0 {
