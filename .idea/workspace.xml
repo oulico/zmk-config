@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8693914e-0526-4f84-8e7e-f93196553495" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/build.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/build.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boards/shields/cygnus/cygnus.dtsi" beforeDir="false" afterPath="$PROJECT_DIR$/boards/shields/cygnus/cygnus.dtsi" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +59,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1749902646885</updated>
-      <workItem from="1749902650711" duration="8781000" />
+      <workItem from="1749902650711" duration="9122000" />
     </task>
     <servers />
   </component>
