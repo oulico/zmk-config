@@ -1,6 +1,10 @@
 #include <dt-bindings/zmk/matrix_transform.h> // Put this with the other includes at the top of your dtsi
 
 / {
+    key_physical_attrs: key_physical_attrs {
+        compatible = "zmk,physical-layout-position";
+    };
+
     kscan0: kscan0 {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
