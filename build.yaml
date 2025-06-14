@@ -28,4 +28,4 @@ include:
   - board: nice_nano_v2
     shield: cygnus_right
     cmake-args: -DCONFIG_ZMK_STUDIO=y
-    artifact-name: cygnus_left_with_studio
+    artifact-name: cygnus_right_with_studio
