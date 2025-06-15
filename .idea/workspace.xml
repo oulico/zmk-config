@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8693914e-0526-4f84-8e7e-f93196553495" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/boards/shields/cygnus/cygnus.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/boards/shields/cygnus/cygnus_left.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/boards/shields/cygnus/cygnus_right.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/build.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1749902646885</updated>
-      <workItem from="1749902650711" duration="11289000" />
+      <workItem from="1749902650711" duration="13479000" />
     </task>
     <servers />
   </component>
