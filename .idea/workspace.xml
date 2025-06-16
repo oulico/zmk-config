@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8693914e-0526-4f84-8e7e-f93196553495" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boards/shields/cygnus/cygnus.conf" beforeDir="false" afterPath="$PROJECT_DIR$/boards/shields/cygnus/cygnus.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boards/shields/cygnus/cygnus.dtsi" beforeDir="false" afterPath="$PROJECT_DIR$/boards/shields/cygnus/cygnus.dtsi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boards/shields/cygnus/cygnus_left.overlay" beforeDir="false" afterPath="$PROJECT_DIR$/boards/shields/cygnus/cygnus_left.overlay" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boards/shields/cygnus/cygnus_right.overlay" beforeDir="false" afterPath="$PROJECT_DIR$/boards/shields/cygnus/cygnus_right.overlay" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
