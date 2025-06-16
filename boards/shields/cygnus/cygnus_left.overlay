@@ -9,7 +9,3 @@
         , <&pro_micro 8 GPIO_ACTIVE_HIGH>
         ;
 };
-
-&default_transform {
-    col-offset = <5>;
-};
