@@ -1,7 +1,4 @@
-// 양쪽 엄지 콤보들
-        combo_caps {
-            timeout-ms = <50>;
-            key-positions = <32 33>; // ES/*
+*
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
@@ -32,9 +29,7 @@
 #define LGUI_T(kc) &mt LGUI kc
 #define LSFT_T(kc) &mt LSHFT kc
 #define ALGR_T(kc) &mt RALT kc
-// LT 매크로 제거 - ZMK에서 충돌 발생
 
-// 커스텀 행동들
 / {
     behaviors {
         // QMK의 DOUBLE_ESC 기능 구현
