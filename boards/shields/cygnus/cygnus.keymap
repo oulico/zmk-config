@@ -1,4 +1,7 @@
-/*
+// 양쪽 엄지 콤보들
+        combo_caps {
+            timeout-ms = <50>;
+            key-positions = <32 33>; // ES/*
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
@@ -29,7 +32,7 @@
 #define LGUI_T(kc) &mt LGUI kc
 #define LSFT_T(kc) &mt LSHFT kc
 #define ALGR_T(kc) &mt RALT kc
-#define LT(layer, kc) &lt layer kc
+// LT 매크로 제거 - ZMK에서 충돌 발생
 
 // 커스텀 행동들
 / {
@@ -113,20 +116,6 @@
             bindings = <&kp LC(LG(D))>;
         };
 
-        // 부트로더 리셋
-        bootloader: bootloader {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bootloader>;
-        };
-
-        // 시스템 리셋
-        sys_reset: sys_reset {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&sys_reset>;
-        };
-
         // Home row mods with QMK timing
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -149,12 +138,6 @@
             key-positions = <32 33>; // ESC + SPC
             bindings = <&caps_word>;
         };
-
-        combo_bootloader {
-            timeout-ms = <50>;
-            key-positions = <30 39>; // 양 끝 엄지
-            bindings = <&bootloader>;
-        };
     };
 
     keymap {
@@ -173,7 +156,7 @@
         // SYM 레이어 (QMK MIRYOKU_LAYER_SYM)
         sym_layer {
             bindings = <
-                &kp LBRC           &kp AMPS           &kp ASTRK          &kp LPAR           &kp RBRC           U_NA               U_NA               U_NA               U_NA               &bootloader
+                &kp LBRC           &kp AMPS           &kp ASTRK          &kp LPAR           &kp RBRC           U_NA               U_NA               U_NA               U_NA               U_NA
                 &kp COLON          &kp DLLR           &kp PRCNT          &kp CARET          &kp PLUS           U_NA               &kp LSHFT          &kp LGUI           &kp LALT           &kp LCTRL
                 &kp TILDE          &kp EXCL           &kp AT             &kp HASH           &kp PIPE           U_NA               U_NA               U_NA               &kp RALT           U_NA
                                                       &kp LPAR           &kp RPAR           &kp UNDER          U_NA               U_NA               U_NA
@@ -183,7 +166,7 @@
         // NAV 레이어 (QMK MIRYOKU_LAYER_NAV)
         nav_layer {
             bindings = <
-                &bootloader        U_NA               U_NA               U_NA               U_NA               &redo              &paste             &copy              &cut               &undo
+                U_NA               U_NA               U_NA               U_NA               U_NA               &redo              &paste             &copy              &cut               &undo
                 &kp LCTRL          &kp LALT           &kp LGUI           &kp LSHFT          U_NA               &kp LEFT           &kp DOWN           &kp UP             &kp RIGHT          &kp GRAVE
                 U_NA               &kp RALT           U_NA               U_NA               U_NA               &kp HOME           &kp PG_DN          &kp PG_UP          &kp END            &kp INS
                                                       U_NA               U_NA               U_NA               &kp RET            &bspc_word         &kp DEL
@@ -193,7 +176,7 @@
         // NUM 레이어 (QMK MIRYOKU_LAYER_NUM)
         num_layer {
             bindings = <
-                &kp LBKT           &kp N7             &kp N8             &kp N9             &kp RBKT           U_NA               U_NA               U_NA               U_NA               &bootloader
+                &kp LBKT           &kp N7             &kp N8             &kp N9             &kp RBKT           U_NA               U_NA               U_NA               U_NA               U_NA
                 &kp SEMI           &kp N4             &kp N5             &kp N6             &kp EQUAL          U_NA               &kp LSHFT          &kp LCTRL          &kp LALT           &kp LGUI
                 &kp GRAVE          &kp N1             &kp N2             &kp N3             &kp BSLH           U_NA               U_NA               U_NA               &kp RALT           U_NA
                                                       &kp DOT            &kp N0             &kp MINUS          U_NA               U_NA               U_NA
@@ -213,7 +196,7 @@
         // MOUSE 레이어 (QMK MIRYOKU_LAYER_MOUSE)
         mouse_layer {
             bindings = <
-                &bootloader        U_NA               U_NA               U_NA               U_NA               &redo              &paste             &copy              &cut               &undo
+                U_NA               U_NA               U_NA               U_NA               U_NA               &redo              &paste             &copy              &cut               &undo
                 &kp LCTRL          &kp LALT           &kp LGUI           &kp LSHFT          U_NA               U_NA               U_NA               U_NA               U_NA               U_NA
                 U_NA               &kp RALT           U_NA               U_NA               U_NA               U_NA               U_NA               U_NA               U_NA               U_NA
                                                       U_NA               U_NA               U_NA               U_NA               U_NA               &desktop_switch
@@ -223,7 +206,7 @@
         // MEDIA 레이어 (추가)
         media_layer {
             bindings = <
-                &bt BT_CLR         &bt BT_SEL 0       &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3       U_NA               U_NA               U_NA               U_NA               &bootloader
+                &bt BT_CLR         &bt BT_SEL 0       &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3       U_NA               U_NA               U_NA               U_NA               U_NA
                 &out OUT_TOG       &kp C_PREV         &kp C_PP           &kp C_NEXT         &kp C_VOL_UP       U_NA               &kp LSHFT          &kp LGUI           &kp LALT           &kp LCTRL
                 U_NA               U_NA               U_NA               U_NA               &kp C_VOL_DN       U_NA               U_NA               U_NA               &kp RALT           U_NA
                                                       U_NA               U_NA               U_NA               U_NA               U_NA               U_NA
