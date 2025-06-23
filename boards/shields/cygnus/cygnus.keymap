@@ -182,7 +182,7 @@
         // FUN 레이어 (QMK MIRYOKU_LAYER_FUN)
         fun_layer {
             bindings = <
-                &kp F12            &kp F7             &kp F8             &kp F9             &screenshot_area   U_NA               U_NA               U_NA               U_NA               U_NA
+                &kp F12            &kp F7             &kp F8             &kp F9             &screenshot_area   &bt BT_CLR         &bt BT_SEL 0       &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3
                 &kp F11            &kp F4             &kp F5             &kp F6             &screenshot_window U_NA               &kp LSHFT          &kp LCTRL          &kp LALT           &kp LGUI
                 &kp F10            &kp F1             &kp F2             &kp F3             &screenshot_screen U_NA               U_NA               U_NA               U_NA               U_NA
                                                       &kp F18            &kp SPACE          &kp TAB            U_NA               U_NA               U_NA
