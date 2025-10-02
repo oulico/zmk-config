@@ -223,9 +223,9 @@
         // MOUSE 레이어
         mouse_layer {
             bindings = <
-                U_NA               U_NA               &msc SCRL_UP       U_NA               U_NA               &redo              &paste             &copy              &cut               &undo
+                U_NA               U_NA               U_NA               U_NA               U_NA               &redo              &paste             &copy              &cut               &undo
                 &kp LCTRL          &kp LALT           &kp LGUI           &kp LSHFT          U_NA               &mmv MOVE_LEFT     &mmv MOVE_DOWN     &mmv MOVE_UP       &mmv MOVE_RIGHT    &mkp RCLK
-                U_NA               &kp RALT           &msc SCRL_DOWN     U_NA               U_NA               &msc SCRL_LEFT     &mkp MCLK          &msc SCRL_RIGHT    U_NA               &mkp LCLK
+                U_NA               &kp RALT           U_NA               U_NA               U_NA               &msc SCRL_LEFT     &msc SCRL_DOWN     &msc SCRL_UP       &msc SCRL_RIGHT               &mkp LCLK
                                                       U_NA               U_NA               U_NA               &mkp LCLK          &mkp RCLK          &lookup
             >;
         };
