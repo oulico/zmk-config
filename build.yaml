@@ -1,12 +1,9 @@
 # This file is used to build the firmware for the Nice! Nano v2 with Cygnus shields.
 ---
 include:
-  # 일반 사용 + USB 로깅
   - board: "nice_nano_v2"
     shield: "cygnus_left"
-    snippet: "zmk-usb-logging"
-    artifact-name: "cygnus_left_debug"
+    artifact-name: "cygnus_left"
   - board: "nice_nano_v2"
     shield: "cygnus_right"
-    snippet: "zmk-usb-logging"
-    artifact-name: "cygnus_right_debug"
+    artifact-name: "cygnus_right"
