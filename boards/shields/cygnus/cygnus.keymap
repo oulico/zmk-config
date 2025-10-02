@@ -219,7 +219,7 @@
                 U_NA               U_NA               U_NA               U_NA               U_NA               &redo              &paste             &copy              &cut               &undo
                 &kp LCTRL          &kp LALT           &kp LGUI           &kp LSHFT          U_NA               &mmv MOVE_LEFT     &mmv MOVE_DOWN     &mmv MOVE_UP       &mmv MOVE_RIGHT    &mkp RCLK
                 U_NA               &kp RALT           U_NA               U_NA               U_NA               &msc SCRL_LEFT     &msc SCRL_DOWN     &msc SCRL_UP       &msc SCRL_RIGHT               &mkp LCLK
-                                                      U_NA               U_NA               U_NA               &mkp LCLK          &mkp RCLK          &LC(LA(F))
+                                                      U_NA               U_NA               U_NA               &mkp LCLK          &mkp RCLK          &kp LC(LA(F))
             >;
         };
 
