@@ -1,6 +1,6 @@
 file_format: "1"
 id: cygnus
-name: Cygnus
+name: Oulico's Cygnus
 type: shield
 url: https://github.com/juhakaup/keyboards
 requires: [ nrf52840 ]
