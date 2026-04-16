@@ -6,6 +6,7 @@ url: https://github.com/juhakaup/keyboards
 requires: [ nrf52840 ]
 features:
   - keys
+  - pointing
 siblings:
   - cygnus_left
   - cygnus_right

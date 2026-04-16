@@ -24,17 +24,8 @@
 #define U_MOUSE 5
 #define U_MEDIA 6
 
-// QMK 스타일 매크로들
+// 빈 키 정의
 #define U_NA &none
-#define U_NP &none
-#define U_NU &none
-
-// QMK의 복합 키들을 ZMK로 변환
-#define LCTL_T(kc) &mt LCTRL kc
-#define LALT_T(kc) &mt LALT kc
-#define LGUI_T(kc) &mt LGUI kc
-#define LSFT_T(kc) &mt LSHFT kc
-#define ALGR_T(kc) &mt RALT kc
 
 // 36-key layout key positions (based on your matrix transform)
 #define LT0  0
@@ -82,44 +73,6 @@
 
 / {
     behaviors {
-        // QMK의 편집 기능들
-        undo: undo {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(Z)>;
-        };
-
-        redo: redo {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(LS(Z))>;
-        };
-
-        cut: cut {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(X)>;
-        };
-
-        copy: copy {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(C)>;
-        };
-
-        paste: paste {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(V)>;
-        };
-
-        // QMK의 백스페이스 워드
-        bspc_word: bspc_word {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(BSPC)>;
-        };
-
         /* Left-hand HRMs */
         hml: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
@@ -186,10 +139,10 @@
         // NAV 레이어 (QMK MIRYOKU_LAYER_NAV)
         nav_layer {
             bindings = <
-                U_NA               U_NA               U_NA               U_NA               U_NA               &redo              &paste             &copy              &cut               &undo
+                U_NA               U_NA               U_NA               U_NA               U_NA               &kp LG(LS(Z))     &kp LG(V)          &kp LG(C)          &kp LG(X)          &kp LG(Z)
                 &kp LCTRL          &kp LALT           &kp LGUI           &kp LSHFT          U_NA               &kp LEFT           &kp DOWN           &kp UP             &kp RIGHT          &kp GRAVE
                 U_NA               &kp RALT           U_NA               U_NA               U_NA               &kp HOME           &kp PG_DN          &kp PG_UP          &kp END            &kp INS
-                                                      U_NA               U_NA               U_NA               &kp RET            &bspc_word         &kp DEL
+                                                      U_NA               U_NA               U_NA               &kp RET            &kp LA(BSPC)       &kp DEL
             >;
         };
 
@@ -197,7 +150,7 @@
         num_layer {
             bindings = <
                 &kp LBKT           &kp N7             &kp N8             &kp N9             &kp RBKT           U_NA               U_NA               U_NA               U_NA               U_NA
-                &kp SEMI           &kp N4             &kp N5             &kp N6             &kp EQUAL          U_NA               &kp LSHFT          &kp LCTRL          &kp LALT           &kp LGUI
+                &kp SEMI           &kp N4             &kp N5             &kp N6             &kp EQUAL          U_NA               &kp LSHFT          &kp LGUI           &kp LALT           &kp LCTRL
                 &kp GRAVE          &kp N1             &kp N2             &kp N3             &kp BSLH           U_NA               U_NA               U_NA               &kp RALT           U_NA
                                                       &kp DOT            &kp N0             &kp MINUS          U_NA               U_NA               U_NA
             >;
@@ -207,7 +160,7 @@
         fun_layer {
             bindings = <
                 &kp F12            &kp F7             &kp F8             &kp F9             U_NA               &bt BT_CLR         &bt BT_SEL 0       &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3
-                &kp F11            &kp F4             &kp F5             &kp F6             U_NA               U_NA               &kp LSHFT          &kp LCTRL          &kp LALT           &kp LGUI
+                &kp F11            &kp F4             &kp F5             &kp F6             U_NA               U_NA               &kp LSHFT          &kp LGUI           &kp LALT           &kp LCTRL
                 &kp F10            &kp F1             &kp F2             &kp F3             U_NA               U_NA               U_NA               U_NA               U_NA               U_NA
                                                       &kp F18            &kp SPACE          &kp TAB            U_NA               U_NA               U_NA
             >;
@@ -216,9 +169,9 @@
         // MOUSE 레이어
         mouse_layer {
             bindings = <
-                U_NA               U_NA               U_NA               U_NA               U_NA               &redo              &paste             &copy              &cut               &undo
+                U_NA               U_NA               U_NA               U_NA               U_NA               &kp LG(LS(Z))     &kp LG(V)          &kp LG(C)          &kp LG(X)          &kp LG(Z)
                 &kp LCTRL          &kp LALT           &kp LGUI           &kp LSHFT          U_NA               &mmv MOVE_LEFT     &mmv MOVE_DOWN     &mmv MOVE_UP       &mmv MOVE_RIGHT    &mkp RCLK
-                U_NA               &kp RALT           U_NA               U_NA               U_NA               &msc SCRL_LEFT     &msc SCRL_DOWN     &msc SCRL_UP       &msc SCRL_RIGHT               &mkp LCLK
+                U_NA               &kp RALT           U_NA               U_NA               U_NA               &msc SCRL_LEFT     &msc SCRL_DOWN     &msc SCRL_UP       &msc SCRL_RIGHT    &mkp LCLK
                                                       U_NA               U_NA               U_NA               &mkp LCLK          &mkp RCLK          &kp LC(LA(F))
             >;
         };
