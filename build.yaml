@@ -1,9 +1,17 @@
-# This file is used to build the firmware for the Nice! Nano v2 with Cygnus shields.
+# This file is used to build the firmware for the Nice! Nano v2.
 ---
 include:
+  # Cygnus
   - board: "nice_nano_v2"
     shield: "cygnus_left"
     artifact-name: "cygnus_left"
   - board: "nice_nano_v2"
     shield: "cygnus_right"
     artifact-name: "cygnus_right"
+  # BastardKB Skeletyl
+  - board: "nice_nano_v2"
+    shield: "skeletyl_left"
+    artifact-name: "skeletyl_left"
+  - board: "nice_nano_v2"
+    shield: "skeletyl_right"
+    artifact-name: "skeletyl_right"
