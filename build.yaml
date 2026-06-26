@@ -8,7 +8,7 @@ include:
   - board: "nice_nano//zmk"
     shield: "cygnus_right"
     artifact-name: "cygnus_right"
-  # BastardKB Skeletyl
+  # Oulico Skeletyl
   - board: "nice_nano//zmk"
     shield: "skeletyl_left"
     artifact-name: "skeletyl_left"

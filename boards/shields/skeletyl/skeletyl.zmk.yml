@@ -1,6 +1,6 @@
 file_format: "1"
 id: skeletyl
-name: BKB Skeletyl
+name: Oulico Skeletyl
 type: shield
 url: https://github.com/Bastardkb/Skeletyl
 requires: [pro_micro]
