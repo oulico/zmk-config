@@ -15,3 +15,7 @@ include:
   - board: "nice_nano//zmk"
     shield: "skeletyl_right"
     artifact-name: "skeletyl_right"
+  # Settings reset (flash wipe utility)
+  - board: "nice_nano//zmk"
+    shield: "settings_reset"
+    artifact-name: "settings_reset"
