@@ -5,9 +5,11 @@ include:
   - board: "nice_nano//zmk"
     shield: "cygnus_left"
     artifact-name: "cygnus_left"
+    snippet: studio-rpc-usb-uart
   - board: "nice_nano//zmk"
     shield: "cygnus_right"
     artifact-name: "cygnus_right"
+    snippet: studio-rpc-usb-uart
   # Oulico Skeletyl
   - board: "nice_nano//zmk"
     shield: "skeletyl_left"
