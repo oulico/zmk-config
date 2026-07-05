@@ -102,6 +102,30 @@
             hold-trigger-on-release;
         };
 
+        /* Shift 전용 HRM — require-prior-idle 없음: 롤링 즉시 Shift 발동
+         * Shift 오작동은 대문자 하나로 끝나지만, Cmd/Ctrl 오작동은 위험하므로 분리. */
+        hml_shift: homerow_mods_left_shift {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;
+        };
+
+        hmr_shift: homerow_mods_right_shift {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;
+        };
+
         /* Thumb layer-tap — &lt 대체
          * 빠른 타이핑 중 엄지 레이어 키가 hold로 오인되는 문제 방지.
          * 직전 키 입력 후 150ms 이내 → 항상 즉시 tap(DEL/BSPC/RET 등)으로 처리.
@@ -166,7 +190,7 @@
         base_layer {
             bindings = <
                 &kp Q              &kp W              &kp E              &kp R              &kp T              &kp Y              &kp U              &kp I              &kp O              &kp P
-                &hml LCTRL A       &hml LALT S        &hml LGUI D        &hml LSHFT F       &kp G              &kp H              &hmr LSHFT J       &hmr LGUI K        &hmr LALT L        &hmr LCTRL SQT
+                &hml LCTRL A       &hml LALT S        &hml LGUI D        &hml_shift LSHFT F &kp G              &kp H              &hmr_shift LSHFT J &hmr LGUI K        &hmr LALT L        &hmr LCTRL SQT
                 &kp Z              &hml RALT X        &kp C              &kp V              &kp B              &kp N              &kp M              &kp COMMA          &hmr RALT DOT      &kp FSLH
                                                       &kp ESC            &tlt U_NAV SPACE   &tlt U_MOUSE TAB   &tlt U_SYM RET     &tlt U_NUM BSPC    &kp DEL
             >;
