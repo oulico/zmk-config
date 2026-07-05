@@ -140,19 +140,21 @@
             bindings = <&mo>, <&kp>;
         };
 
+        /* DEL 전용 layer-tap — require-prior-idle 없음
+         * 타이핑 직후에도 홀드하면 즉시 레이어 활성화. */
+        lt_del: layer_tap_del {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            bindings = <&mo>, <&kp>;
+        };
+
     };
 
     combos {
         compatible = "zmk,combos";
-
-        // 언어전환: 바깥 엄지 두 개 동시 (ESC + DEL, pos 30+35)
-        // DEL 누른 채 ESC 누르면 즉시 F18 발사, 딜레이 없음
-        combo_lang {
-            timeout-ms = <60>;
-            key-positions = <30 35>;
-            bindings = <&kp F18>;
-            layers = <0>;
-        };
 
         // Caps Word: 안쪽 엄지 두 개 동시 (TAB + RET, pos 32+33)
         combo_caps {
@@ -192,7 +194,7 @@
                 &kp Q              &kp W              &kp E              &kp R              &kp T              &kp Y              &kp U              &kp I              &kp O              &kp P
                 &hml LCTRL A       &hml LALT S        &hml LGUI D        &hml_shift LSHFT F &kp G              &kp H              &hmr_shift LSHFT J &hmr LGUI K        &hmr LALT L        &hmr LCTRL SQT
                 &kp Z              &hml RALT X        &kp C              &kp V              &kp B              &kp N              &kp M              &kp COMMA          &hmr RALT DOT      &kp FSLH
-                                                      &kp ESC            &tlt U_NAV SPACE   &tlt U_MOUSE TAB   &tlt U_SYM RET     &tlt U_NUM BSPC    &kp DEL
+                                                      &kp ESC            &tlt U_NAV SPACE   &tlt U_MOUSE TAB   &tlt U_SYM RET     &tlt U_NUM BSPC    &lt_del U_FUN DEL
             >;
         };
 
@@ -232,7 +234,7 @@
                 &kp F12            &kp F7             &kp F8             &kp F9             U_NA               &bt BT_CLR         &bt BT_SEL 0       &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3
                 &kp F11            &kp F4             &kp F5             &kp F6             U_NA               U_NA               &kp LSHFT          &kp LGUI           &kp LALT           &kp LCTRL
                 &kp F10            &kp F1             &kp F2             &kp F3             U_NA               U_NA               U_NA               U_NA               U_NA               U_NA
-                                                      &studio_unlock     &kp SPACE          &kp TAB            U_NA               U_NA               U_NA
+                                                      &kp F18            &kp SPACE          &kp TAB            U_NA               U_NA               U_NA
             >;
         };
 
