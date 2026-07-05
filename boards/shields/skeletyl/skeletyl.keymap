@@ -117,15 +117,27 @@
 
     };
 
-    // 콤보 정의 (QMK의 THUMBCOMBOS 기능)
     combos {
         compatible = "zmk,combos";
 
-        // 양쪽 엄지 콤보들
+        // 언어전환: 안쪽 엄지 두 개 동시 (TAB + RET, pos 32+33)
+        // require-prior-idle-ms: 타이핑 중엔 콤보 무시 → TAB/RET 딜레이 없음
+        // 타이핑 멈추고 누르면 즉시 F18 발사 → 언어전환
+        combo_lang {
+            timeout-ms = <50>;
+            key-positions = <32 33>;
+            bindings = <&kp F18>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+
+        // Caps Word: 바깥 엄지 두 개 동시 (ESC + DEL, pos 30+35)
         combo_caps {
             timeout-ms = <50>;
-            key-positions = <32 33>; // 필요시 위치 조정
+            key-positions = <30 35>;
             bindings = <&caps_word>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
         };
     };
 
